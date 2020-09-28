@@ -1,24 +1,21 @@
 package world.ucode;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import world.ucode.scene.SceneGameMenu;
+import world.ucode.model.TamagotchiModel;
 
 public class MainApp extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("unit-factory-ucode-tamagotchi");
+        new SceneGameMenu(primaryStage);
+        primaryStage.show();
+    }
+
     public static void main(String[] args) {
         TamagotchiModel connectDatabase = new TamagotchiModel();
         connectDatabase.createNewTable();
         Application.launch(args);
-    }
-
-    @Override
-    public void start(Stage primaryStage) {
-        primaryStage.setTitle("tamagotchi");
-        new SceneGameMenu(primaryStage);
-        primaryStage.show();
     }
 }

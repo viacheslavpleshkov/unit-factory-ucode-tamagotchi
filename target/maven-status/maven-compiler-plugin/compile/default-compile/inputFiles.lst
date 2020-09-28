@@ -1,3 +1,7 @@
 /Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/MainApp.java
-/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/ConnectDatabase.java
-/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/TamagotchiModel.java
+/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/controller/ControllerObject.java
+/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/scene/SceneGameMenu.java
+/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/scene/SceneObject.java
+/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/controller/ControllerGameMenu.java
+/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/model/ConnectDatabase.java
+/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/src/main/java/world/ucode/model/TamagotchiModel.java

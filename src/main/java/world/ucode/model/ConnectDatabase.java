@@ -1,4 +1,4 @@
-package world.ucode;
+package world.ucode.model;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
@@ -6,9 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- *
- */
 public class ConnectDatabase {
     /**
      * Connect to the test.db database

@@ -1,0 +1,10 @@
+.root {
+   -fx-font-size: 14px;
+   -fx-font-family: 'Rock Salt';
+   -fx-background-color: #040404;
+}
+
+.game-menu-item {
+   -fx-background-color: #fcdb00;
+   -fx-text-fill: #040404;
+}
