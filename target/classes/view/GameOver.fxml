@@ -12,6 +12,6 @@
             <Image url="@../images/game-over.png" />
          </image>
       </ImageView>
-      <Button layoutX="399.0" layoutY="326.0" mnemonicParsing="false" text="Go to manu" />
+      <Button layoutX="399.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#ClickedGotoManu" text="Go to manu" />
    </children>
 </Pane>

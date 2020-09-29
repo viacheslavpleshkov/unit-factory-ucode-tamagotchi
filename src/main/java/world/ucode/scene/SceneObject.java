@@ -17,7 +17,7 @@ public abstract class SceneObject {
             Parent PaneRoot = loader.load();
             this.scene = new Scene(PaneRoot);
             this.scene.getStylesheets().add("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
-            this.scene.getStylesheets().add("css/GameMenu.css");
+            this.scene.getStylesheets().add("css/main.css");
             primaryStage.getIcons().add(new Image("images/icon.png"));
             primaryStage.setScene(this.scene);
             primaryStage.setResizable(false);
