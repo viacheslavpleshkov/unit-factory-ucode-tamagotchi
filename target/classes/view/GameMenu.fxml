@@ -16,8 +16,8 @@
             <Image url="@../images/background.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="440.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#ClickedNewGame" onMouseEntered="#EnteredNewGame" onMouseExited="#ExitedNewGame" prefHeight="47.0" prefWidth="119.0" styleClass="game-menu-item" text="New game" textAlignment="CENTER" />
-      <Button layoutX="440.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#ClickedLoadGame" prefHeight="47.0" prefWidth="119.0" styleClass="game-menu-item" text="Load Game" textAlignment="CENTER" />
-      <Button layoutX="440.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#ClickedExit" prefHeight="47.0" prefWidth="119.0" styleClass="game-menu-item" text="Exit" textAlignment="CENTER" />
+      <Button fx:id="NewGameButton" layoutX="440.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#ClickedNewGame" onMouseEntered="#EnteredNewGame" onMouseExited="#ExitedNewGame" prefHeight="47.0" prefWidth="119.0" styleClass="game-menu-item" text="New game" textAlignment="CENTER" />
+      <Button fx:id="LoadGameButton" layoutX="440.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#ClickedLoadGame" onMouseEntered="#EnteredLoadGame" onMouseExited="#ExitedLoadGame" prefHeight="47.0" prefWidth="119.0" styleClass="game-menu-item" text="Load Game" textAlignment="CENTER" />
+      <Button fx:id="ClickedExitButton" layoutX="440.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#ClickedExit" onMouseEntered="#EnteredExit" onMouseExited="#ExitedExit" prefHeight="47.0" prefWidth="119.0" styleClass="game-menu-item" text="Exit" textAlignment="CENTER" />
    </children>
 </Pane>

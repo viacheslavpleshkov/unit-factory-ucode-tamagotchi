@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="1000.0">
+         <image>
+            <Image url="@../images/background-new-game.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="591.0" layoutY="79.0" mnemonicParsing="false" text="Next" />
+      <TextField layoutX="417.0" layoutY="79.0" promptText="Enter character name" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="457.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/person1/person.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="538.0" layoutY="436.0" mnemonicParsing="false" textAlignment="CENTER" />
+      <Button layoutX="457.0" layoutY="436.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="4.0" textAlignment="CENTER" />
+      <Label layoutX="398.0" layoutY="39.0" text="Choose a character" textAlignment="CENTER" textFill="#fcdb00">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

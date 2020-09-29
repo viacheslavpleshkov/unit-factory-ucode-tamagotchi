@@ -4,8 +4,8 @@ import javafx.stage.Stage;
 
 public abstract class ControllerObject {
     protected Stage primaryStage;
-    protected String style = "-fx-background-color:yellow;";
-    protected String styleHover = "-fx-background-color:yellow;-fx-border-color: black; -fx-border-radius: 5px;";
+    protected String style = "-fx-background-color:#fcdb00; -fx-text-fill: #040404;";
+    protected String styleHover = "-fx-background-color:#beae7d; -fx-text-fill: #ffffff;";
 
     ControllerObject(Stage primaryStage) {
         this.primaryStage = primaryStage;
