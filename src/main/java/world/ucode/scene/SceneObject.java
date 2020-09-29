@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 
 public abstract class SceneObject {
     private Scene scene;
-    private final int width = 1000;
-    private final int height = 500;
+    private int width = 1000;
+    private int height = 500;
 
     public SceneObject(Stage primaryStage, String fxmlName, Object Controller) {
         try {
@@ -31,5 +31,8 @@ public abstract class SceneObject {
 
     public Scene getScene() {
         return scene;
+    }
+    public int setWidth(int with) {
+
     }
 }
