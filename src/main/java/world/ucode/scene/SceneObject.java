@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 
 public abstract class SceneObject {
     private Scene scene;
-    private int width = 1000;
-    private int height = 500;
 
     public SceneObject(Stage primaryStage, String fxmlName, Object Controller) {
         try {
@@ -17,7 +15,7 @@ public abstract class SceneObject {
             loader.setLocation(getClass().getResource(fxmlName));
             loader.setController(Controller);
             Parent PaneRoot = loader.load();
-            this.scene = new Scene(PaneRoot, this.width, this.height);
+            this.scene = new Scene(PaneRoot);
             this.scene.getStylesheets().add("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
             this.scene.getStylesheets().add("css/GameMenu.css");
             primaryStage.getIcons().add(new Image("images/icon.png"));
@@ -31,8 +29,5 @@ public abstract class SceneObject {
 
     public Scene getScene() {
         return scene;
-    }
-    public int setWidth(int with) {
-
     }
 }
