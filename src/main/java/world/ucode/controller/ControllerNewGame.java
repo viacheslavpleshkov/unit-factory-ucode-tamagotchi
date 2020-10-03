@@ -1,11 +1,14 @@
 package world.ucode.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import world.ucode.model.TamagotchiModel;
 
 import java.util.ArrayList;
 
@@ -40,7 +43,6 @@ public class ControllerNewGame extends ControllerObject {
         listImage.add(personTree);
         listImage.add(personFore);
     }
-
     @FXML
     private void ClickedNext() {
         counter++;
@@ -76,7 +78,16 @@ public class ControllerNewGame extends ControllerObject {
     }
     @FXML
     private void ClickedPlay() {
-     System.exit(1);
+        if(TextFieldName.getText().matches("[a-zA-Z]+") && !TextFieldName.getText().trim().isEmpty()) {
+            TamagotchiModel tamagotchiModel = new TamagotchiModel();
+            tamagotchiModel.createNewCharacter(TextFieldName.getText(), counter);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Required Fields Empty");
+            alert.setContentText("text");
+            alert.showAndWait();
+        }
     }
     @FXML
     private void EnteredPlay() {
