@@ -1,6 +1,8 @@
 package world.ucode.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -10,6 +12,14 @@ import java.util.ArrayList;
 public class ControllerNewGame extends ControllerObject {
     @FXML
     ImageView ImageViewPerson;
+    @FXML
+    Button ButtonNext;
+    @FXML
+    Button ButtonPrevious;
+    @FXML
+    Button ButtonPlay;
+    @FXML
+    TextField TextFieldName;
     protected Image personOne = new Image("images/person1/person.png");
     protected Image personTwo = new Image("images/person2/person.png");
     protected Image personTree = new Image("images/person3/person.png");
@@ -46,4 +56,35 @@ public class ControllerNewGame extends ControllerObject {
         ImageViewPerson.setImage(listImage.get(counter));
     }
 
+    @FXML
+    private void EnteredNext() {
+        ButtonNext.setStyle(styleHover);
+    }
+
+    @FXML
+    private void ExitedNext() {
+        ButtonNext.setStyle(style);
+    }
+    @FXML
+    private void EnteredPrevious() {
+        ButtonPrevious.setStyle(styleHover);
+    }
+
+    @FXML
+    private void ExitedPrevious() {
+        ButtonPrevious.setStyle(style);
+    }
+    @FXML
+    private void ClickedPlay() {
+     System.exit(1);
+    }
+    @FXML
+    private void EnteredPlay() {
+        ButtonPlay.setStyle(styleHover);
+    }
+
+    @FXML
+    private void ExitedPlay() {
+        ButtonPlay.setStyle(style);
+    }
 }

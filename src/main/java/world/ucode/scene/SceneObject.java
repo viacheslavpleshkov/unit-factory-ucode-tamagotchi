@@ -20,6 +20,7 @@ public abstract class SceneObject {
             this.scene.getStylesheets().add("css/main.css");
             primaryStage.getIcons().add(new Image("images/icon.png"));
             primaryStage.setScene(this.scene);
+            primaryStage.centerOnScreen();
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch (Exception e) {

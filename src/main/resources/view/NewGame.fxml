@@ -12,15 +12,15 @@
             <Image url="@../images/background-new-game.png" />
          </image>
       </ImageView>
-      <Button layoutX="591.0" layoutY="114.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="77.0" styleClass="game-menu-item" text="Next" />
-      <TextField layoutX="300.0" layoutY="114.0" prefHeight="44.0" prefWidth="279.0" promptText="Enter character name" />
+      <Button fx:id="ButtonPlay" layoutX="591.0" layoutY="114.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="77.0" styleClass="game-menu-item" onMouseClicked="#ClickedPlay"  onMouseEntered="#EnteredPlay" onMouseExited="#ExitedPlay" text="Next" />
+      <TextField fx:id="TextFieldName" layoutX="300.0" layoutY="114.0" prefHeight="44.0" prefWidth="279.0" promptText="Enter character name" />
       <ImageView fx:id="ImageViewPerson" fitHeight="150.0" fitWidth="200.0" layoutX="473.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/person1/person.png" />
          </image>
       </ImageView>
-      <Button layoutX="522.0" layoutY="436.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" styleClass="game-menu-item" onMouseClicked="#ClickedNext" text="Next" textAlignment="CENTER" />
-      <Button layoutX="399.0" layoutY="437.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" styleClass="game-menu-item" onMouseClicked="#ClickedPrevious" text="Previous" textAlignment="CENTER" />
+      <Button fx:id="ButtonNext" layoutX="522.0" layoutY="436.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" styleClass="game-menu-item" onMouseClicked="#ClickedNext"  onMouseEntered="#EnteredNext" onMouseExited="#ExitedNext" text="Next" textAlignment="CENTER" />
+      <Button fx:id="ButtonPrevious" layoutX="399.0" layoutY="437.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" styleClass="game-menu-item" onMouseClicked="#ClickedPrevious"  onMouseEntered="#EnteredPrevious" onMouseExited="#ExitedPrevious"  text="Previous" textAlignment="CENTER" />
       <Label layoutX="316.0" layoutY="14.0" text="Choose a character" textAlignment="CENTER" textFill="#fcdb00">
          <font>
             <Font name="Rock Salt" size="34.0" />
