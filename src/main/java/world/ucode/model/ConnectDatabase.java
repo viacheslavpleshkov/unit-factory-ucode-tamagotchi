@@ -13,7 +13,7 @@ public class ConnectDatabase {
      */
     public Connection connect() {
         // SQLite connection string
-        String url = "jdbc:sqlite:/Users/spleshkov/Desktop/unit-factory-ucode-tamagotchi/tamagotchi.db";
+        String url = "jdbc:sqlite:tamagotchi.db";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);

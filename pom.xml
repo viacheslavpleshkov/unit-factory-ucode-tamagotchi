@@ -2,6 +2,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <properties>
+        <encoding>UTF-8</encoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>

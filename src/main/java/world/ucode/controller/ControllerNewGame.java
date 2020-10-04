@@ -78,9 +78,10 @@ public class ControllerNewGame extends ControllerObject {
     }
     @FXML
     private void ClickedPlay() {
-        if(TextFieldName.getText().matches("[a-zA-Z]+") && !TextFieldName.getText().trim().isEmpty()) {
-            TamagotchiModel tamagotchiModel = new TamagotchiModel();
-            tamagotchiModel.createNewCharacter(TextFieldName.getText(), counter);
+        if(TextFieldName.getText().matches("[a-zA-Z]+")
+                && !TextFieldName.getText().trim().isEmpty()) {
+//            TamagotchiModel tamagotchiModel = new TamagotchiModel();
+//            tamagotchiModel.createNewCharacter(TextFieldName.getText().trim(), counter);
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");

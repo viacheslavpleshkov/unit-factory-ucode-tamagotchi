@@ -5,3 +5,5 @@
 /vendor
 /build
 .DS_Store
+target
+tamagotchi.db
