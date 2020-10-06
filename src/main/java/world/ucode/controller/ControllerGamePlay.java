@@ -1,7 +1,6 @@
 package world.ucode.controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -13,7 +12,7 @@ import world.ucode.scene.SceneGamePlay;
 
 import java.util.ArrayList;
 
-public class ControllerNewGame extends ControllerObject {
+public class ControllerGamePlay extends ControllerObject {
     @FXML
     ImageView ImageViewPerson;
     @FXML
@@ -32,7 +31,7 @@ public class ControllerNewGame extends ControllerObject {
 
     public int counter = 0;
 
-    public ControllerNewGame(Stage primaryStage) {
+    public ControllerGamePlay(Stage primaryStage) {
         super(primaryStage);
         this.setListImage();
     }
@@ -85,8 +84,7 @@ public class ControllerNewGame extends ControllerObject {
 
     @FXML
     private void ClickedPlay() {
-        if (TextFieldName.getText().matches("[a-zA-Z]+")
-                && !TextFieldName.getText().trim().isEmpty()) {
+        if (TextFieldName.getText().matches("[a-zA-Z]+") && !TextFieldName.getText().trim().isEmpty()) {
             TamagotchiModel tamagotchiModel = new TamagotchiModel();
             tamagotchiModel.createNewCharacter(TextFieldName.getText(), counter);
             new SceneGamePlay(primaryStage);

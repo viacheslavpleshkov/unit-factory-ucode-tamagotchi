@@ -9,6 +9,7 @@ import java.sql.Statement;
 public class ConnectDatabase {
     /**
      * Connect to the test.db database
+     *
      * @return the Connection object
      */
     public Connection connect() {

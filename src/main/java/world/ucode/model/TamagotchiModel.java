@@ -3,6 +3,7 @@ package world.ucode.model;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.*;
 
 public class TamagotchiModel extends ConnectDatabase {
 
@@ -41,12 +42,13 @@ public class TamagotchiModel extends ConnectDatabase {
         // SQL statement for creating a new table
         String sql = "INSERT INTO tamagotchi " +
                 "(name, person, health, happiness, thirst, cleanliness, givewater, givemedicine, cleanup) " +
-                "VALUES ('" + name + "', "+ person+" , 0, 0, 0, 0, 0, 0, 0);";
+                "VALUES (?, ?, 0, 0, 0, 0, 0, 0, 0);";
 
         try (Connection conn = this.connect();
-             Statement stmt = conn.createStatement()) {
-            // create a new table
-            stmt.execute(sql);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, name);
+            pstmt.setInt(2, person);
+            pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
