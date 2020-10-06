@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
@@ -7,33 +11,34 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="513.0" fitWidth="1009.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="600" fitWidth="1000" layoutX="-0.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Library/Mobile%20Documents/com~apple~CloudDocs/Developments/Java/unit-factory-ucode-tamagotchi/src/main/resources/images/background-game-play.png" />
+            <Image url="@../images/background-game-play.png" />
          </image>
       </ImageView>
-      <Button layoutX="222.0" layoutY="459.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="65.0" text="Play" />
-      <Button layoutX="315.0" layoutY="459.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="74.0" text="Feed" />
-      <Button layoutX="406.0" layoutY="459.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="142.0" text="Give water" />
-      <Button layoutX="566.0" layoutY="459.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="142.0" text="Give medicine" />
+      <Button layoutX="120.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#ClickedPlay" prefHeight="30.0" prefWidth="142.0" text="Play" />
+      <Button layoutX="280.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#ClickedFeed" prefHeight="30.0" prefWidth="142.0" text="Feed" />
+      <Button layoutX="440.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#ClickedGiveWater" prefHeight="30.0" prefWidth="142.0" text="Give water" />
+      <Button layoutX="600.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#ClickedGiveMedicine" prefHeight="30.0" prefWidth="142.0" text="Give medicine" />
+      <Button layoutX="760.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#ClickedCleanUp" prefHeight="30.0" prefWidth="142.0" text="Clean up" />
       <ImageView fitHeight="223.0" fitWidth="176.0" layoutX="410.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Library/Mobile%20Documents/com~apple~CloudDocs/Developments/Java/unit-factory-ucode-tamagotchi/src/main/resources/images/person1/person.png" />
+            <Image url="@../images/person1/person.png" />
          </image>
       </ImageView>
-      <Button layoutX="746.0" layoutY="459.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="142.0" text="Clean up" />
-      <ProgressBar layoutX="781.0" layoutY="26.0" prefWidth="200.0" progress="0.0" />
-      <ProgressBar layoutX="781.0" layoutY="60.0" prefWidth="200.0" progress="0.0" />
-      <ProgressBar layoutX="781.0" layoutY="94.0" prefWidth="200.0" progress="0.0" />
-      <ProgressBar layoutX="32.0" layoutY="36.0" prefWidth="200.0" progress="0.0" />
-      <ProgressBar layoutX="32.0" layoutY="70.0" prefWidth="200.0" progress="0.0" />
-      <Label layoutX="242.0" layoutY="37.0" text="health" />
-      <Label layoutX="242.0" layoutY="71.0" text="happiness" />
-      <Label layoutX="731.0" layoutY="26.0" text="hunger" />
-      <Label layoutX="732.0" layoutY="61.0" text="thirst" />
-      <Label layoutX="716.0" layoutY="95.0" text="cleanliness" />
+      <ProgressBar fx:id="ProgressBarHealth" layoutX="781.0" layoutY="36.0" prefWidth="200.0" progress="1.0" />
+      <ProgressBar fx:id="ProgressBarHappiness" layoutX="781.0" layoutY="70.0" prefWidth="200.0" progress="1.0" />
+      <ProgressBar fx:id="ProgressBarHunger" layoutX="781.0" layoutY="104.0" prefWidth="200.0" progress="1.0" />
+      <ProgressBar fx:id="ProgressBarThirst" layoutX="32.0" layoutY="36.0" prefWidth="200.0" progress="1.0" />
+      <ProgressBar fx:id="ProgressBarCleanliness" layoutX="32.0" layoutY="70.0" prefWidth="200.0" progress="1.0" />
+      <Label layoutX="242.0" layoutY="21.0" text="health" />
+      <Label layoutX="242.0" layoutY="55.0" text="happiness" />
+      <Label layoutX="715.0" layoutY="21.0" text="hunger" />
+      <Label layoutX="720.0" layoutY="55.0" text="thirst" />
+      <Label layoutX="685.0" layoutY="90.0" text="cleanliness" />
+      <ImageView fx:id="ImageViewFon" fitHeight="600" fitWidth="1000" layoutX="-0.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+      </ImageView>
    </children>
 </Pane>
