@@ -3,7 +3,7 @@ package world.ucode.controller;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import world.ucode.scene.SceneGameOver;
+import world.ucode.scene.SceneLoadGame;
 import world.ucode.scene.SceneNewGame;
 
 public class ControllerGameMenu extends ControllerObject {
@@ -35,7 +35,7 @@ public class ControllerGameMenu extends ControllerObject {
 
     @FXML
     private void ClickedLoadGame() {
-        new SceneGameOver(primaryStage);
+        new SceneLoadGame(primaryStage);
     }
 
     @FXML
