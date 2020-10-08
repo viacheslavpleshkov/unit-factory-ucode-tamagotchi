@@ -6,6 +6,7 @@ import java.sql.Statement;
 import java.sql.*;
 
 public class TamagotchiModel extends ConnectDatabase {
+    private String name;
     private double health = 1.0;
     private double happiness = 1.0;
     private double hunger = 1.0;
@@ -14,6 +15,13 @@ public class TamagotchiModel extends ConnectDatabase {
 
     public TamagotchiModel() {
         this.createNewTable();
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getHealth() {
@@ -82,7 +90,7 @@ public class TamagotchiModel extends ConnectDatabase {
         }
     }
 
-    public void createNewCharacter(String name, int person) {
+    public int createNewCharacter(String name, int person) {
         String sql = "INSERT INTO tamagotchi " +
                 "(name, person, health, happiness, thirst, cleanliness, givewater, givemedicine, cleanup) " +
                 "VALUES (?, ?, 0, 0, 0, 0, 0, 0, 0);";
@@ -91,7 +99,27 @@ public class TamagotchiModel extends ConnectDatabase {
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, name);
             pstmt.setInt(2, person);
-            pstmt.executeUpdate();
+            int affectedRows =  pstmt.executeUpdate();
+            if (affectedRows == 0) {
+                throw new SQLException("Creating user failed, no rows affected.");
+            }
+            return affectedRows;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return 0;
+    }
+
+    public void find(int id) {
+        String sql = "SELECT * FROM tamagotchi WHERE id = ?;";
+        ResultSet resultSet = null;
+
+        try (Connection conn = this.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            resultSet = pstmt.executeQuery();
+            this.setName(resultSet.getString("name"));
+            this.set(resultSet.getString("person"));
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

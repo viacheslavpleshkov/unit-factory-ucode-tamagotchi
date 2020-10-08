@@ -33,9 +33,9 @@ public class ControllerGamePlay extends ControllerObject {
 
     private TamagotchiModel tamagotchiModel;
     protected boolean one = true;
-    public ControllerGamePlay(Stage primaryStage) {
+    public ControllerGamePlay(Stage primaryStage, int idModel) {
         super(primaryStage);
-        this.tamagotchiModel = new TamagotchiModel();
+        this.tamagotchiModel = new TamagotchiModel().find(idModel);
         this.GameOver();
     }
 

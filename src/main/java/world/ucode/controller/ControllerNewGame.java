@@ -88,8 +88,8 @@ public class ControllerNewGame extends ControllerObject {
         if (TextFieldName.getText().matches("[a-zA-Z]+")
                 && !TextFieldName.getText().trim().isEmpty()) {
             TamagotchiModel tamagotchiModel = new TamagotchiModel();
-            tamagotchiModel.createNewCharacter(TextFieldName.getText(), counter);
-            new SceneGamePlay(primaryStage);
+            int idModel = tamagotchiModel.createNewCharacter(TextFieldName.getText(), counter);
+            new SceneGamePlay(primaryStage, idModel);
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
